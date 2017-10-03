@@ -23,15 +23,13 @@ OWNERS = []
   def initialize(species)
     @species = species
     @name = name
+    pets= {:fishes => [], :dogs => [], :cats => []}
     OWNERS << self
   end
 
+
   def say_species
     "I am a #{species}."
-  end
-
-  def pets
-    owner = {:fishes => [], :dogs => [], :cats => []}
   end
 
   def buy_fish(name)
