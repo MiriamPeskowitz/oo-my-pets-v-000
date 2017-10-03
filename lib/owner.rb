@@ -64,9 +64,9 @@ OWNERS = []
   end
 
   def sell_pets
-#array - 1 pets[xxx] how do I get to each one?
-  pets.each do |animal, name|
-    animal.each {|animal,name| name.mood = "nervous"}
+
+  pets.each do |animal, petArray|
+    petArray.each {|name| name.mood = "nervous"}
     end
     pets.empty
   end
