@@ -61,10 +61,10 @@ OWNERS = []
   end
 
   def sell_pets
-    pets.each do |animal, petArray|
-      petArray.each {|name| name.mood = "nervous"}
+    pets.each do |type, pets|
+      pets.each {|name| name.mood = "nervous"}
     end
-    pets.empty
+    pets.clear
   end
 
   def list_pets
