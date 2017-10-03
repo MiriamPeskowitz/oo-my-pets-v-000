@@ -8,24 +8,33 @@ attr_reader :species
 OWNERS = []
 #how do you choose between a class constant and a class variable?
 
-  def initialize(species)
-    # how does the instance get its name?
-    @species = species
-    OWNERS << self
+ def self.all
+   OWNERS
+ end
 
-    #how do I get the species into the right hash?
-    @pets ={:fishes => [], :dogs => [], :cats => []}
+ def self.reset_all
+   OWNERS.clear
+ end
+
+ def self.count
+   OWNERS.size
+ end
+
+  def initialize(species)
+    @name = name
+    OWNERS << self
   end
 
-  def name=(name)
-    raise Error
-   # like in video, what's the syntax?
-   @name = name
-   #owner.add_name?? 
-  #can read but not write/can't be changed
+  def species(species)
+    @species = species
+  end
 
   def say_species
-    puts  "I am a #{@species}"
+    "I am a #{species}."
+  end
+
+  def pets
+    owner ={:fishes => [], :dogs => [], :cats => []}
   end
 
   def buy_fish(name)
@@ -33,28 +42,29 @@ OWNERS = []
     fish = Fish.new(name)
     pets[:fishes] << fish
   end
-
+#Do i need to connect these with their births in their class files?
   def buy_cat(name)
     cat = Cat.new(name)
     pets[:cats] << cat
   end
 
   def buy_dog(name)
-    dog = Dog.new(name)
-    pets[:dogs] << dog
+    #dog = Dog.new(name)
+
+    pets[:dogs] << Dog.new(name)
   end
 
-  def walk_dogs(mood)
-    pets[:dogs].each {|d| d.mood="happy" }
+  def walk_dogs
+    pets[:dogs].each {|dog| dog.mood="happy" }
   end
 
 
-  def play_with_cats(mood= "happy")
-    pets[:cats].each {|c| c.mood}
+  def play_with_cats
+    pets[:cats].each {|c| c.mood="happy"}
   end
 
-  def feed_fish(mood="happy")
-    pets[:fishes].each {|fishes, name| name.mood}
+  def feed_fish
+    pets[:fishes].each {|fishes| f.mood="happy"}
   end
 
   def sell_pets
@@ -76,19 +86,6 @@ OWNERS = []
     #  end
     puts "I have #{pets[:fishes].count} fish, #{pets[:dogs].count} dog(s), and #{pets[:cats].count} cat(s)."
   end
-
-
- def self.all
-   OWNERS
- end
-
- def self.reset_all
-   OWNERS.clear
- end
-
- def self.count
-   OWNERS.size
- end
 
 
 end
