@@ -26,7 +26,7 @@ OWNERS = []
     OWNERS << self
   end
 
-  def say_species(species)
+  def say_species
     "I am a #{species}."
   end
 
