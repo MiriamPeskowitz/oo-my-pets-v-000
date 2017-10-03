@@ -64,7 +64,7 @@ OWNERS = []
     pets.each do |animal, petArray|
       petArray.each {|name| name.mood = "nervous"}
     end
-      pets.empty
+    pets.empty
   end
 
   def list_pets
