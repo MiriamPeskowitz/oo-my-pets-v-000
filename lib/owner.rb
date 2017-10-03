@@ -68,15 +68,11 @@ OWNERS = []
   end
 
   def list_pets
-    pets[dogs]
-    pets[fishes]
-    pets[cats]
-
-#how do I list the contents of the array?
-  #  pets.each do |type, name|
-    #  puts type
-    #  end
-    puts "I have #{pets[:fishes].count} fish, #{pets[:dogs].count} dog(s), and #{pets[:cats].count} cat(s)."
+    
+    pets.each do |type, pets|
+      pets 
+    end
+     "I have #{pets[:fishes].count} fish, #{pets[:dogs].count} dog(s), and #{pets[:cats].count} cat(s)."
   end
 
 
