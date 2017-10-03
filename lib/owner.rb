@@ -33,12 +33,10 @@ OWNERS = []
   end
 
   def buy_fish(name)
-    #purchase fish that is instance of Fish class
     fish = Fish.new(name)
     pets[:fishes] << fish
   end
-#goal: owner gets  fish.name
-#Do i need to connect these with their births in their class files?
+
   def buy_cat(name)
     cat = Cat.new(name)
     pets[:cats] << cat
@@ -46,7 +44,6 @@ OWNERS = []
 
   def buy_dog(name)
     dog = Dog.new(name)
-    dog.name
     pets[:dogs] << dog
   end
 
@@ -64,11 +61,10 @@ OWNERS = []
   end
 
   def sell_pets
-
-  pets.each do |animal, petArray|
-    petArray.each {|name| name.mood = "nervous"}
+    pets.each do |animal, petArray|
+      petArray.each {|name| name.mood = "nervous"}
     end
-    pets.empty
+      pets.empty
   end
 
   def list_pets
