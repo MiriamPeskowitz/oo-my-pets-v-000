@@ -34,7 +34,7 @@ OWNERS = []
   end
 
   def pets
-    owner ={:fishes => [], :dogs => [], :cats => []}
+    owner = {:fishes => [], :dogs => [], :cats => []}
   end
 
   def buy_fish(name)
@@ -42,6 +42,7 @@ OWNERS = []
     fish = Fish.new(name)
     pets[:fishes] << fish
   end
+#goal: owner gets  fish.name
 #Do i need to connect these with their births in their class files?
   def buy_cat(name)
     cat = Cat.new(name)
