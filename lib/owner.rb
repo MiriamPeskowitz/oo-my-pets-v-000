@@ -49,9 +49,9 @@ OWNERS = []
   end
 
   def buy_dog(name)
-    #dog = Dog.new(name)
-
-    pets[:dogs] << Dog.new(name)
+    dog = Dog.new(name)
+    dog.name
+    pets[:dogs] << dog
   end
 
   def walk_dogs
