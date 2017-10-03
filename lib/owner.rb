@@ -68,7 +68,7 @@ OWNERS = []
   end
 
   def list_pets
-    
+
     pets.each do |type, pets|
       pets
     end
