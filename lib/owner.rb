@@ -60,7 +60,7 @@ OWNERS = []
   end
 
   def feed_fish
-    pets[:fishes].each {|fishes| f.mood="happy"}
+    pets[:fishes].each {|f| f.mood="happy"}
   end
 
   def sell_pets
