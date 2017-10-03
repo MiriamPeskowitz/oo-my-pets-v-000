@@ -23,7 +23,7 @@ OWNERS = []
   def initialize(species)
     @species = species
     @name = name
-    pets= {:fishes => [], :dogs => [], :cats => []}
+    pets = {:fishes => [], :dogs => [], :cats => []}
     OWNERS << self
   end
 
