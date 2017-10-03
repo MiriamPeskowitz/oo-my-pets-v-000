@@ -70,7 +70,7 @@ OWNERS = []
   def list_pets
     
     pets.each do |type, pets|
-      pets 
+      pets
     end
      "I have #{pets[:fishes].count} fish, #{pets[:dogs].count} dog(s), and #{pets[:cats].count} cat(s)."
   end
