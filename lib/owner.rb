@@ -21,6 +21,7 @@ OWNERS = []
  end
 
   def initialize(species)
+    @species = species
     @name = name
     OWNERS << self
   end
